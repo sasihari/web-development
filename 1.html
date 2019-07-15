@@ -1,0 +1,59 @@
+<html>
+ <title>radio form 1</title>
+   <body>
+   <form method="post" action="2.html" onsubmit="callme()">
+       <p id="results"> </p>
+       <table align="center" cellpadding = "10">
+<tr>
+<td id ="gender" >GENDER</td>
+<td>
+    <input type="radio" id="r1" name="rate" value="Male"> Male
+  <input type="radio" id="r2" name="rate" value="Female"> Female
+  <input type="radio" id="r3" name="rate" value="Others" checked="checked"> Others
+</td>
+</tr>
+
+
+<tr>
+<td colspan="2" align="center">
+
+<input type="submit"  value="submit">
+
+</td>
+</tr>
+
+</td>
+</tr>
+ </table>
+</form>
+
+  <script>
+    function callme(){
+
+
+         var gender = document.getElementById('gender').value;
+         var rate_value;
+         localStorage.setItem('Gender',gender );
+
+         if(document.getElementById('r1').checked)
+         {
+         rate_value = document.getElementById('r1').value;
+         localStorage.setItem('Gender',rate_value );
+
+         }
+        else if(document.getElementById('r2').checked)
+        {
+        rate_value = document.getElementById('r2').value;
+        localStorage.setItem('Gender',rate_value);
+       }
+       else if(document.getElementById('r3').checked)
+       {
+       rate_value = document.getElementById('r3').value;
+       localStorage.setItem('Gender', rate_value);
+       }
+
+    }
+</script>
+</body>
+</html>
+
